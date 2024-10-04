@@ -1,0 +1,76 @@
+Student Name: Zainab Unisa
+Student Id: C0911582
+1.The Array Artifact
+Reflection:
+In the Array Artifact challenge, I learned how to effectively manage a fixed-size collection using
+arrays in Java. Implementing the ArtifactVault class reinforced my understanding of fundamental
+data structures and operations such as adding, removing, and searching for elements. I gained
+insight into the importance of maintaining sorted data for efficient searching algorithms like binary
+search.
+Difficulties Encountered:
+One significant difficulty I faced was ensuring the array was dynamically managed, as arrays in
+Java have a fixed size. To overcome this, I implemented logic to find the next available slot for
+new artifacts and ensured the array remained sorted after each insertion. This required careful
+handling of indices and conditions, which enhanced my debugging skills.
+Ideas for Improvement:
+To further extend this solution, I could implement a feature that allows the user to resize the array
+when it becomes full, enabling more artifacts to be added. Additionally, incorporating a more userfriendly interface for artifact management could improve usability, such as a command-line menu
+for different operations.
+2.The Linked List Labyrinth
+Reflection:
+The Linked List Labyrinth challenge introduced me to the workings of singly linked lists and their
+applications in tracking paths. Creating the LabyrinthPath class helped me understand the
+advantages of linked lists over arrays, such as dynamic size and efficient insertions/deletions.
+Implementing the loop detection method also deepened my understanding of pointer manipulation.
+Difficulties Encountered
+I encountered challenges when trying to implement the loop detection algorithm. Initially, my
+approach using two pointers was inefficient, and I had difficulty ensuring that they met at the
+correct positions. After reviewing common techniques, I successfully applied Floyd's cyclefinding algorithm, which simplified my implementation.
+Ideas for Improvement
+To improve the Labyrinth Path class, I could add functionality to save and load paths from a file,
+allowing users to manage their paths persistently. Additionally, integrating a graphical
+representation of the labyrinth could provide a more interactive user experience.
+3.The Stack of Ancient Texts
+Reflection:
+In the Stack of Ancient Texts challenge, I explored the Last-In-First-Out (LIFO) principle by
+developing the Scroll Stack class. I learned how stacks are used to manage data effectively,
+especially in scenarios like undo operations or managing recursive calls. This project reinforced
+my knowledge of stack operations and their applications.
+Difficulties Encountered
+Implementing the stack functionality was relatively straightforward, but I faced challenges in
+ensuring proper error handling for edge cases, such as popping from an empty stack. To overcome
+this, I created informative messages that guide the user, which improved the overall robustness of
+the program.
+Ideas for Improvement
+To enhance the ScrollStack class, I could add functionality to limit the stack's size and implement
+an automatic resizing feature. Additionally, creating a search method to retrieve specific scrolls by
+title could add more functionality to the class.
+4.The Queue of Explorers
+Reflection:
+In the Queue of Explorers challenge, I implemented a circular queue to manage the flow of
+explorers entering a temple. This challenge provided valuable insights into queue operations and
+how circular data structures work to optimize memory usage. I learned how to efficiently handle
+enqueueing and dequeuing operations while maintaining the queue's state.
+Difficulties Encountered
+One major difficulty I faced was ensuring that the circular nature of the queue was maintained,
+especially when checking if the queue was full or empty. Initially, my logic led to incorrect results.
+However, by carefully implementing indices to track the front and rear of the queue, I resolved
+this issue.
+Ideas for Improvement
+To extend the Explorer Queue class, I could implement a priority system where certain explorers
+are processed before others based on predefined criteria. Additionally, providing a visual
+representation of the queue's state could enhance user understanding of the data structure.
+5.The Binary Tree of Clues
+Reflection:
+The Binary Tree of Clues challenge allowed me to explore tree data structures and their traversal
+methods. Implementing the Clue Tree class taught me how to manage hierarchical data effectively.
+I learned the importance of different traversal techniques, such as in-order, pre-order, and postorder, and their respective use cases.
+Difficulties Encountered
+A challenge I faced was ensuring that the insertion method correctly placed clues in their respective
+positions within the tree. This required careful consideration of the binary search tree properties.
+Debugging this logic was challenging, but I resolved it by using test cases to verify the correctness
+of each insertion.
+Ideas for Improvement
+To improve the Clue Tree class, I could implement balancing mechanisms to keep the tree efficient,
+such as converting it into an AVL tree. Additionally, adding methods to visualize the tree structure
+or export the clues to a file could enhance the functionality of the class.
