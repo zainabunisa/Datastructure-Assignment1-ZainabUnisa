@@ -1,0 +1,91 @@
+package com.cestar.datastructure;
+
+public class AdventurerQueue {
+    private String[] line;  // Array to represent the queue
+    private int start, end, count, maxCapacity;
+
+    public AdventurerQueue(int maxCapacity) {
+        this.maxCapacity = maxCapacity;
+        this.line = new String[maxCapacity];
+        this.start = 0;
+        this.end = 0;
+        this.count = 0;
+    }
+
+    // Enqueue a new adventurer
+    public void enqueue(String adventurer) {
+        if (isFull()) {
+            System.out.println("Queue is full. Cannot enqueue adventurer: " + adventurer);
+            return;
+        }
+        line[end] = adventurer;
+        end = (end + 1) % maxCapacity;
+        count++;
+        System.out.println("Enqueued adventurer: " + adventurer);
+    }
+
+    // Dequeue an adventurer
+    public String dequeue() {
+        if (isEmpty()) {
+            System.out.println("Queue is empty. Cannot dequeue adventurer.");
+            return null;
+        }
+        String adventurer = line[start];
+        start = (start + 1) % maxCapacity;
+        count--;
+        System.out.println("Dequeued adventurer: " + adventurer);
+        return adventurer;
+    }
+
+    // Display the next adventurer in line
+    public String peek() {
+        if (isEmpty()) {
+            System.out.println("Queue is empty. No adventurer in line.");
+            return null;
+        }
+        return line[start];
+    }
+
+    // Check if the queue is full
+    public boolean isFull() {
+        return count == maxCapacity;
+    }
+
+    // Check if the queue is empty
+    public boolean isEmpty() {
+        return count == 0;
+    }
+
+    // Main method to demonstrate functionality
+    public static void main(String[] args) {
+        AdventurerQueue adventurerQueue = new AdventurerQueue(5); // Capacity of the queue is 5
+
+        // Enqueue adventurers
+        adventurerQueue.enqueue("Anjali");
+        adventurerQueue.enqueue("Biyoncee");
+        adventurerQueue.enqueue("Chamalian");
+        adventurerQueue.enqueue("Dinxta");
+        adventurerQueue.enqueue("Ethan");
+
+        // Attempt to enqueue when the queue is full
+        adventurerQueue.enqueue("Frank");
+
+        // Display the next adventurer in line
+        System.out.println("Next adventurer in line: " + adventurerQueue.peek());
+
+        // Dequeue adventurers
+        adventurerQueue.dequeue();
+        adventurerQueue.dequeue();
+
+        // Display the next adventurer after dequeuing
+        System.out.println("Next adventurer in line after dequeue: " + adventurerQueue.peek());
+
+        // Dequeue remaining adventurers
+        adventurerQueue.dequeue();
+        adventurerQueue.dequeue();
+        adventurerQueue.dequeue();
+
+        // Attempt to dequeue when the queue is empty
+        adventurerQueue.dequeue();
+    }
+}
